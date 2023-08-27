@@ -1,0 +1,31 @@
+<div class="form-layout">
+    <div *ngIf="error" style="margin-left: 76px;
+    color: red;">{{error}}</div>
+    <form style="margin-left: 18px;margin-right: 14px;margin-top: 16px;" [formGroup]="formDetails" (ngSubmit)="loginFrom()">
+        <h4 style="color: blueviolet;
+        margin-bottom: 13px;">Login Page</h4>
+         <mat-form-field class="example-full-width" style="width:260px !important">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com" style="width: 50px;">
+        </mat-form-field>
+        <mat-form-field class="example-full-width" style="width:260px !important">
+          <mat-label>Password</mat-label>
+          <!-- <mat-icon>remove_red_eye</mat-icon> -->
+
+          <input matInput [type]="type?'password':'text'" matInput formControlName="password" placeholder="Anhu567">
+          <mat-icon matSuffix (click)="changetype()" [name]="iconname ?'eye-outline':'eye-off-outline'">remove_red_eye</mat-icon>
+          
+        </mat-form-field>
+        <p style="text-align:right;margin-top: -12px; color: blueviolet;cursor: pointer;"><a  routerLink="/forgot-password">Forgot Password</a></p>
+        <button
+          mat-flat-button
+          color="primary"
+          [disabled]="disabled" color="primary" style="width: 263px;height: 31px;background: blueviolet;
+          border-radius: 5px;">
+  <span>Submit</span>
+    </button>
+    <p class="create-account"><a  routerLink="/register">Create Account</a></p>
+
+      </form>
+</div>
+

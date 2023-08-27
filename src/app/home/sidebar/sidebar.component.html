@@ -1,0 +1,13 @@
+
+<h4 style="color: blueviolet;
+margin-bottom: 13px;">File Upload Page</h4>
+<mat-form-field class="example-full-width" style="width:260px !important">
+    <mat-label>File Upload</mat-label>
+    <input type="file" class="file-upload" (change)="onChange($event)">
+    <!-- <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com" style="width: 50px;"> -->
+  </mat-form-field>
+  <button mat-flat-button color="primary" style="width: 263px;height: 31px;background: blueviolet;
+        border-radius: 5px;" (click)="upload()">Upload File</button>
+        <div class="container" *ngIf="loading">
+            <h3>Loading ...</h3>
+        </div>

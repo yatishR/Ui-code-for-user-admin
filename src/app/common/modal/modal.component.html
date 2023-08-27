@@ -1,0 +1,8 @@
+
+<div mat-dialog-content>
+ <p class="dialogDetails">{{data.message}}</p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Close</button>
+  <button mat-button cdkFocusInitial (click)="onNoClick()">Ok</button>
+</div>
